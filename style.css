@@ -16,7 +16,7 @@ body{
 	letter-spacing: 16px;
 	color: #fff;
 	text-align: center;
-	padding-top: 300px;
+	/*padding-top: 300px;*/
 }
 .slide1{
 	background-image: url("SLIDE1.jpg");
@@ -79,4 +79,80 @@ body{
 	100%{
 		opacity: 0;
 	}
+}
+.navbar{
+	opacity:0.5;
+}
+.dropdown-menu{
+	background-color:black;
+}
+a:hover{
+	color:black;
+}
+.navigate{
+	margin-top:-20px;
+	height: 650px;
+
+}
+
+.element-to-hide{
+    visibility:hidden;
+}
+
+
+/*animator*/
+.slideRight {
+    visibility: visible;
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150%);
+    }
+    50% {
+        transform: translateX(8%);
+    }
+    65% {
+        transform: translateX(-4%);
+    }
+    80% {
+        transform: translateX(4%);
+    }
+    95% {
+        transform: translateX(-2%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#services {
+	height:500px;
+	color: #fff;
+	background-color: #1E88E5;
+}
+#pencil {
+	height:500px;
+	color: #fff;
+	background-color: #673ab7;
+}
+#cls_mgt_sys {
+	height:500px;
+	color: #fff;
+	background-color: #ff9800;
+}
+#about {
+	height:500px;
+	color: #fff;
+	background-color: #00bcd4;
+}
+#contact {
+	height:500px;
+	color: #fff;
+	background-color: #009688;
 }

@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>MQ Spectrum - New Home</title>
+    <head>
+        <title>MQ Spectrum - New Home</title>
 
-    <!--bootstrap inclusion-->
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            window.location = '#home';
-            $(window).scroll(function() {
-                $('.animation').each(function () {
-                    var imagePos = $(this).offset().top;
-                    var imageHeight = $(this).height();
-                    var topOfWindow = $(window).scrollTop();
-                    if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
-                        $(this).addClass("slideRight");
-                    } else {
-                        $(this).removeClass("slideRight");
-                    }
+        <!--bootstrap inclusion-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                window.location = '#home';
+                $(window).scroll(function() {
+                    $('.animation').each(function () {
+                        var imagePos = $(this).offset().top;
+                        var imageHeight = $(this).height();
+                        var topOfWindow = $(window).scrollTop();
+                        if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
+                            $(this).addClass("slideRight");
+                        } else {
+                            $(this).removeClass("slideRight");
+                        }
+                    });
                 });
             });
-        });
-    </script>
+        </script>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body data-spy="scroll" data-target=".navbar">
-    <!--navigation element-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="height:80px;">
-        <div class="container-fluid" style="height:80px;">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="home.html"><img src="MQLOGO.png" style="height:50px; width:210px;"></a>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+        <!--navigation element-->
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="height:80px;">
+            <div class="container-fluid" style="height:80px;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="home.html"><img src="MQLOGO.png" style="height:50px; width:210px;"></a>
+                </div>
+                <div style= "height:15px;"></div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#services"><span class="glyphicon glyphicon-cog"></span> Services</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="glyphicon glyphicon-tasks"></span> Products <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="tamil" style="color:silver;"><a href="#pencil" style="color:silver;">OnPencil</a></li>
+                                <li class="tamil" style="color:silver;">
+                                    <a href="#cls_mgt_sys" style="color:silver;">Classroom Management System</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+                        <li><a href="#contact"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div style= "height:15px;"></div>
-            <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li><a href="#services"><span class="glyphicon glyphicon-cog"></span> Services</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <span class="glyphicon glyphicon-tasks"></span> Products <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="tamil" style="color:silver;"><a href="#pencil" style="color:silver;">OnPencil</a></li>
-                            <li class="tamil" style="color:silver;"><a href="#cls_mgt_sys" style="color:silver;">Classroom Management System</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
-                    <li><a href="#contact"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
-                </ul>
+        </nav>
+
+        <!--carousel element-->
+        <div id="home" class="navigate">
+            <div class="slide1"></div>
+            <div class="slide2"></div>
+            <div class="slide3"></div>
+        </div>
+
+        <div>
+            <div id="services" class="container-fluid element-to-hide animation">
+                <h1>Services Submenu1</h1>
+            </div>
+            <div id="pencil" class="container-fluid element-to-hide animation">
+                <h1>Pencil Submenu2</h1>
+            </div>
+            <div id="cls_mgt_sys" class="container-fluid element-to-hide animation">
+                <h1>Classroom Management System Submenu 3</h1>
+            </div>
+            <div id="about" class="container-fluid element-to-hide animation">
+                <h1>About Submenu 1</h1>
+            </div>
+            <div id="contact" class="container-fluid element-to-hide animation">
+                <h1>Contact Submenu 2</h1>
             </div>
         </div>
-    </nav>
-
-    <!--carousel element-->
-    <div id="home" class="navigate">
-        <div class="slide1"></div>
-        <div class="slide2"></div>
-        <div class="slide3"></div>
-    </div>
-
-    <div>
-        <div id="services" class="container-fluid element-to-hide animation">
-            <h1>Services Submenu1</h1>
-        </div>
-        <div id="pencil" class="container-fluid element-to-hide animation">
-            <h1>Pencil Submenu2</h1>
-        </div>
-        <div id="cls_mgt_sys" class="container-fluid element-to-hide animation">
-            <h1>Classroom Management System Submenu 3</h1>
-        </div>
-        <div id="about" class="container-fluid element-to-hide animation">
-            <h1>About Submenu 1</h1>
-        </div>
-        <div id="contact" class="container-fluid element-to-hide animation">
-            <h1>Contact Submenu 2</h1>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

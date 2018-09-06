@@ -2,33 +2,26 @@
 <html>
     <head>
         <title>MQ Spectrum - New Home</title>
-
-        <!--bootstrap inclusion-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- bootstrap headers inclusion -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Including CSS files-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="MQLOGO.png" type="image/gif" sizes="10x20">
+		<link rel="stylesheet" href="aos.css">
+        <script src="aos.js"></script>
+		<!-- AOS Library Inclusion -->
         <script>
             $(document).ready(function() {
+				AOS.init();
                 window.location = '#home';
-                $(window).scroll(function() {
-                    $('.animation').each(function () {
-                        var imagePos = $(this).offset().top;
-                        var imageHeight = $(this).height();
-                        var topOfWindow = $(window).scrollTop();
-                        if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
-                            $(this).addClass("slideRight");
-                        } else {
-                            $(this).removeClass("slideRight");
-                        }
-                    });
-                });
             });
         </script>
-
-        <link rel="stylesheet" href="style.css">
     </head>
     <body data-spy="scroll" data-target=".navbar">
-        <!--navigation element-->
+        <!--navigation element starts-->
         <nav class="navbar navbar-inverse navbar-fixed-top" style="height:80px;">
             <div class="container-fluid" style="height:80px;">
                 <div class="navbar-header">
@@ -38,13 +31,12 @@
                 <div>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                        <li><a href="#services"><span class="glyphicon glyphicon-cog"></span> Services</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <span class="glyphicon glyphicon-tasks"></span> Products <span class="caret"></span>
+                                <span class="glyphicon glyphicon-tasks"></span> Flagship solutions <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="tamil" style="color:silver;"><a href="#pencil" style="color:silver;">OnPencil</a></li>
+                                <li class="tamil" style="color:silver;"><a href="#pencil" style="color:silver;">Pencil E-Learning Solution</a></li>
                                 <li class="tamil" style="color:silver;">
                                     <a href="#cls_mgt_sys" style="color:silver;">Classroom Management System</a>
                                 </li>
@@ -56,30 +48,96 @@
                 </div>
             </div>
         </nav>
-
-        <!--carousel element-->
-        <div id="home" class="navigate">
-            <div class="slide1"></div>
-            <div class="slide2"></div>
-            <div class="slide3"></div>
-        </div>
-
-        <div>
-            <div id="services" class="container-fluid element-to-hide animation">
-                <h1>Services Submenu1</h1>
+		<!-- navigation element ends -->
+        <!-- carousel element -->
+			<div id="home" class="navigate">
+				<div class="slide1" data-aos="flip-up"><h1 style="color:white; padding-top:280px;">
+				<center><i>"Lets strive towards<br>knowledge empowerment and excellence in intellect"
+				</i></center></h1></div>
+				<div class="slide2" data-aos="flip-up"><h1 style="color:white; padding-top:280px;"><center>
+				<i>"Join Us in developing knowledge"</i></h1></div>
+				<div class="slide3" data-aos="flip-up"><h1 style="color:white; padding-top:280px;"><center><i>
+				"Learn along with us"</i></center></h1></div>
+			</div>
+		<!-- carousel element ends -->
+        <!-- pencil of flgshp_solns -->
+		<div style="background-image: grey.jpg; background-size:cover; background-repeat: no-repeat;">
+            <div data-aos="fade-down" id="pencil"  class="container-fluid">
+			    <h1 style="color:black; font-size:50px; font-family:cursive;"><b>Pencil E-Learning Solution</b></h1>
+				<div class="row">
+					<div class="col-md-6">
+						<img src="pencilscreen.png" style="height:350px; width=160px; padding-top:30px;">
+					</div>
+					<div class="col-md-6">
+						<p class="customcenter" style="padding:80px 20px 20px 20px; font-size:15px;">Pencil is a fully functioning
+                        off-the-shelf Learning Management System designed for corporates and used by many of our clients.
+                        Apart from the traditional courses, it features social learning tools which integrates learning
+                        spaces and events together with traditional courses providing a blended learning environment.
+                        The platform comes with a various tools to help you build your courses, arrange materials,
+                        create learning paths and utilize a huge array of resources and activities.</p>
+						<a href="https://onpencil.io/" class="btn btn-primary"  style="margin:20px 0px 0px 250px;" role="button">FIND MORE</a>
+					</div>
+				</div>
             </div>
-            <div id="pencil" class="container-fluid element-to-hide animation">
-                <h1>Pencil Submenu2</h1>
+		<!-- pencil of flgshp_solns ends -->
+		<!-- cls_mgmt_sys of flgshp_solns -->
+            <div data-aos="fade-up" id="cls_mgt_sys" class="container-fluid">
+                <h1 style="color:black; font-size:50px; font-family:cursive;"><b>Classroom Management System</b></h1>
+				<div class="row">
+					<div class="col-md-6">
+						<img src="cls_mgmt_sys.png" style="height:350px; width=180px;">
+					</div>
+					<div class="col-md-6">
+						<p class="customcenter" style="padding:80px 20px 20px 20px; font-size:15px;">The smart classroom						classroom
+						is a collaborative platform built to allow students and instructors to communicate with one another instantly.
+						It rides on technologies like Jabber (same technology as GoogleTalk) to provide an instance
+						messaging platform for users to collaborate. Instructors are armed with powerful tools
+						which can bring out interactive whiteboards, load Powerpoints, observe student’s screens,
+						lock their tablets or computers etc.
+						This platform works on all three platforms with some limitations which are platform dependent.</p>
+					</div>
+				</div>
             </div>
-            <div id="cls_mgt_sys" class="container-fluid element-to-hide animation">
-                <h1>Classroom Management System Submenu 3</h1>
+		<!-- cls_mgmt_sys of flgshp_solns ends -->
+		<!-- division for about -->
+            <div data-aos="zoom-in-down" id="about" class='container-fluid'>
+                <h1 style="color:black; font-size:50px; font-family:cursive; padding-left:30px;"><b>What About us?!!!</b></h1>
+				<div class="row">
+				<div class="col-md-6">
+				  <img src="about.jpg" style="height:450px; width=400px; padding:60px 20px 20px 20px;">
+					</div>
+						<div class="col-md-6">
+						<p class="customcenter" style="padding-top:0px 20px 20px 50px; font-size:18px;">
+						<br><h3 style="color:blue;"><i>CERTIFICATIONS</i></h3></br>
+						MQ Spectrum focuses on the needs of the customer and we are totally committed to safety and quality.
+						With<h4 style="color:red;">bizSAFE 2<h4> &amp; <h4 style="color:red;">ISO9001:2015</h4> certifications,
+						you can be assured that our products and services are of quality engineered in ethical and
+						responsible environments
+						<br><h3 style="color:blue;"><i>OUR HISTORY</i></h3></br>
+						MQ Spectrum is all about doing IT better. We are Singapore’s leading development house for
+						delivering Corporate eLearning Solutions. Our values in collaborative innovation and social
+						responsibility, drives our 7-year track record for helping corporate and statutory institutes
+						develop stronger, modernized solutions for their digital business needs. With these expertise in
+						IT Consultation, Modern Applications, Infrastructure and Software Development services,
+						we are ready to deliver robust eLearning, ERP and Smart Office Solutions for today’s
+						digital-business needs. We aim to be a premier international software services and solutions
+						company by providing the best value to clients, employees and associates in an honest, open
+						and ethical environment.
+						</p>
+						</div>
+				    </div>
+				</div>
             </div>
-            <div id="about" class="container-fluid element-to-hide animation">
-                <h1>About Submenu 1</h1>
-            </div>
-            <div id="contact" class="container-fluid element-to-hide animation">
-                <h1>Contact Submenu 2</h1>
-            </div>
-        </div>
+		</div>
+		<!-- about division ends -->
+		<!-- Footer for Contact -->
+		<div data-aos="zoom-out-down" id="contact" class='container-fluid' style="height:200px; margin-top:200px; opacity:0.8">
+		<footer>
+					<h3><center><span class="glyphicon glyphicon-envelope"></span><i> : contact@mqspectrum.com</i></center></h3>
+					<h3><center><span class="glyphicon glyphicon-earphone"></span><i> : +65 6354 4811</i></center></h3>
+					<h3><center><span class="glyphicon glyphicon-map-marker"></span><i> : Singapore 577218,
+					59 Jalan Pemimpin, 02-01</i></h3>
+        </footer>
+		<!-- Footer-contact ends -->
     </body>
 </html>
